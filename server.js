@@ -12,9 +12,11 @@ app.use(express.json());
 
 // connect DB
 // task: ADD YOUR DB LINK FROM .env
-const uri = process.env.DB_LINK;
+
 mongoose
-  .connect(uri)
+  .connect(
+    'mongodb+srv://uriMernApp:f123456@cluster0.kblqpki.mongodb.net/mernapp?retryWrites=true&w=majority'
+  )
   .then(() => {
     console.log('My Database is connected successfully');
   })
